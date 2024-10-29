@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <title>Gemini LinkUp</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay">
+
+        <h1>Gemini LinkUp</h1>
+
+        <div class="chat-container" id="chatContainer">
+
+        <div class="content">
+
+          <div class="image">
+            <label for="imageUploader" class="media"
+              ><i class="ri-image-add-fill icon"></i
+            ></label>
+            <input
+              type="file"
+              id="imageUploader"
+              accept="image/*"
+              style="display: none"
+            />
+          </div>
+
+          <textarea
+            id="prompt"
+            name="prompt"
+            rows="4"
+            placeholder="Ask anything..."
+          ></textarea>
+
+          <div class="audio">
+            <label for="audioUploader" class="media"
+              ><i class="ri-mic-line icon"></i
+            ></label>
+            <input
+              type="file"
+              id="audioUploader"
+              accept="audio/*"
+              style="display: none"
+            />
+          </div>
+
+          <button id="btn">
+            <i class="ri-send-plane-fill icon"></i>
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
