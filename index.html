@@ -1,65 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <title>Gemini LinkUp</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="overlay">
 
-        <h1>Gemini LinkUp</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <title>Gemini GO!</title>
+</head>
 
-        <div class="chat-container" id="chatContainer">
-
+<body>
+  <div class="container">
+    <div class="overlay">
+      <header>
+        <h1>Gemini GO!</h1>
+      </header>
+      <main class="chat-container" id="chatContainer" />
+      <footer class="content-container">
         <div class="content">
+          <label for="stream">
+            Stream?
+            <input type="checkbox" value="stream" name="stream" id="stream" checked>
+          </label>
+          <div class="vertical-divider"></div>
 
-          <div class="image">
-            <label for="imageUploader" class="media"
-              ><i class="ri-image-add-fill icon"></i
-            ></label>
-            <input
-              type="file"
-              id="imageUploader"
-              accept="image/*"
-              style="display: none"
-            />
+          <div class="image" role="button">
+            <label for="imageUploader" class="media"><i class="ri-upload-2-line icon"></i></label>
+            <input type="file" id="imageUploader" accept="image/*" style="display: none" />
           </div>
 
-          <textarea
-            id="prompt"
-            name="prompt"
-            rows="4"
-            placeholder="Ask anything..."
-          ></textarea>
+          <input type="text" id="prompt" name="prompt" placeholder="Ask anything..."></input>
 
-          <div class="audio">
-            <label for="audioUploader" class="media"
-              ><i class="ri-mic-line icon"></i
-            ></label>
-            <input
-              type="file"
-              id="audioUploader"
-              accept="audio/*"
-              style="display: none"
-            />
-          </div>
+          <!-- <div class="audio" role="button"> -->
+          <!--   <label for="audioUploader" class="media" -->
+          <!--     ><i class="ri-mic-line icon"></i -->
+          <!--   ></label> -->
+          <!--   <input -->
+          <!--     type="file" -->
+          <!--     id="audioUploader" -->
+          <!--     accept="audio/*" -->
+          <!--     style="display: none" -->
+          <!--   /> -->
+          <!-- </div> -->
 
           <button id="btn">
             <i class="ri-send-plane-fill icon"></i>
           </button>
 
         </div>
-      </div>
+      </footer>
     </div>
+  </div>
 
-    <script type="module" src="./main.js"></script>
-  </body>
+  <script type="module" src="./main.js"></script>
+</body>
+
 </html>
