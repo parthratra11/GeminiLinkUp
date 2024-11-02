@@ -76,10 +76,10 @@ const generateResult = async (prompt) => {
       .querySelector("div[class='image'] i")
       .classList.remove("uploadImageAudio");
 
-    audioUploader.value = "";
-    document
-      .querySelector("div[class='audio'] i")
-      .classList.remove("uploadImageAudio");
+    // audioUploader.value = "";
+    // document
+    //   .querySelector("div[class='audio'] i")
+    //   .classList.remove("uploadImageAudio");
   } catch (error) {
     addMessage("An error occurred: " + error.message, "response-message");
   }
