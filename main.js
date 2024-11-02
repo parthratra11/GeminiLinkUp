@@ -19,7 +19,7 @@ imageUploader.addEventListener("input", () => {
 //     .classList.add("uploadImageAudio");
 // });
 
-const API_KEY = "API_KEY";
+const API_KEY = import.meta.env.VITE_API_KEY;
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 const chat = model.startChat({
